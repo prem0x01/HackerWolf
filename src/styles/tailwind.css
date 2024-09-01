@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles */
+@layer base {
+    body {
+        font-family: 'Courier New', Courier, monospace;
+        color: #00ff00; /* Neon green text color */
+        background-color: #000000; /* Dark background */
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    a {
+        color: #00ff00; /* Neon green links */
+    }
+
+    a:hover {
+        color: #0f0; /* Slightly different shade of green for hover effect */
+    }
+
+    button {
+        background-color: #00ff00; /* Neon green button */
+        color: #000000; /* Dark text on buttons */
+        border-radius: 4px;
+    }
+
+    button:hover {
+        background-color: #0f0; /* Slightly different shade of green on hover */
+    }
+}
+
+@layer components {
+    /* Custom button styles */
+    .btn {
+        @apply px-4 py-2 rounded-lg text-black bg-green-500 transition-all duration-300 ease-in-out;
+    }
+
+    .btn:hover {
+        @apply bg-green-400 transform scale-105;
+    }
+
+    /* Custom input field styles */
+    .input-field {
+        @apply bg-gray-800 text-green-500 border border-green-500 rounded-lg px-4 py-2;
+    }
+
+    .input-field::placeholder {
+        @apply text-gray-500;
+    }
+
+    .input-field:focus {
+        @apply border-green-300 outline-none;
+    }
+}
+
+@layer utilities {
+    /* Custom utility classes for spacing and alignment */
+    .mt-4 {
+        @apply mt-4;
+    }
+
+    .mb-4 {
+        @apply mb-4;
+    }
+
+    .p-4 {
+        @apply p-4;
+    }
+
+    .bg-dark {
+        @apply bg-gray-900;
+    }
+
+    .border-green {
+        @apply border-green-500;
+    }
+
+    .rounded-lg {
+        @apply rounded-lg;
+    }
+
+    .shadow-lg {
+        @apply shadow-lg;
+    }
+
+    .flex {
+        @apply flex;
+    }
+
+    .items-center {
+        @apply items-center;
+    }
+
+    .justify-center {
+        @apply justify-center;
+    }
+
+    .space-y-4 > * + * {
+        @apply mt-4;
+    }
+
+    .space-y-8 > * + * {
+        @apply mt-8;
+    }
+}
